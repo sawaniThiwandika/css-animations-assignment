@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    main{
+      position: relative;
+      width: 100vw;
+      height:100vh;
+      background-image: url("assets/sky.jpg");
+    }
+    #town{
+      bottom: 200px;
+      display: flex;
+      animation-name: my-animation;
+      animation-duration: 5s;
+      width: 200vw;
+      height: 301px;
+      position: absolute;
+      animation-direction: revert;
+      animation-iteration-count: infinite;
+    }
+
+    .town{
+      background-size: cover;
+      background-position: center;
+      background-image: url("assets/city.png");
+      width: 100vw;
+      height: 301px;
+      position: absolute;
+      margin: auto;
+    }
+    #road{
+      bottom: 0;
+      display: flex;
+      animation-name: my-animation;
+      animation-duration: 5s;
+      width: 200vw;
+      height:200px;
+      position: absolute;
+      animation-iteration-count: infinite;
+    }
+    .road{
+      background-size: cover;
+      background-position: center;
+      background-image: url("assets/road.jpg");
+      width: 100vw;
+      height: 200px;
+      position: absolute;
+      margin: auto;
+    }
+    @keyframes my-animation {
+      from{
+        transform: translateX(0%);
+      }
+      to{
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section id="town">
+    <div class="town"></div>
+    <div class="town" style="bottom: 100px;"></div>
+  </section>
+  <section id="road">
+    <div class="road" ></div>
+    <div class="road" style="bottom: 100px;"></div>
+  </section>
+</main>
+</body>
+</html>
